@@ -32,7 +32,7 @@ pipeline {
             sh '''echo $BUILD_ID
 pwd
 ls -alh
-mvn build clean package'''
+mvn clean package'''
           }
         }
 
