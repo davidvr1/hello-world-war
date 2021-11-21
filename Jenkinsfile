@@ -17,15 +17,25 @@ pipeline {
     }
 
     stage('mvn build') {
-      steps {
-        script {
-          env.stepLevel = 'mvn build'
+      parallel {
+        stage('mvn build') {
+          steps {
+            script {
+              env.stepLevel = 'mvn build'
+            }
+
+          }
         }
 
-        sh '''echo $BUILD_ID
+        stage('build') {
+          steps {
+            sh '''echo $BUILD_ID
 pwd
 ls
 mvn build clean package'''
+          }
+        }
+
       }
     }
 
