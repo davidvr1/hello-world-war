@@ -23,7 +23,7 @@ pipeline {
         }
 
         sh '''echo $BUILD_ID
-mvn pom.xml compile'''
+mvn pom.xml clean package'''
       }
     }
 
