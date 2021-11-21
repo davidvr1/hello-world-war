@@ -22,7 +22,8 @@ pipeline {
           env.stepLevel = 'mvn build'
         }
 
-        sh '''cd hello-world-war_dev
+        sh '''pwd
+cd hello-world-war_dev
 echo $BUILD_ID
 mvn compile'''
       }
