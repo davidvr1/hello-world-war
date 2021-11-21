@@ -25,7 +25,7 @@ pipeline {
         sh '''echo $BUILD_ID
 pwd
 ls
-mvn clean package'''
+mvn build clean package'''
       }
     }
 
