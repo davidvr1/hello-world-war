@@ -31,7 +31,7 @@ pipeline {
           steps {
             sh '''echo $BUILD_ID
 pwd
-ls
+ls -alh
 mvn build clean package'''
           }
         }
