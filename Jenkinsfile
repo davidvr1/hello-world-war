@@ -23,6 +23,7 @@ pipeline {
         }
 
         sh '''echo $BUILD_ID
+ls
 mvn clean package'''
       }
     }
