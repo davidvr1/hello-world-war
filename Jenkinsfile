@@ -27,7 +27,8 @@ pipeline {
             sh '''echo $BUILD_ID
 pwd
 ls -alh
-mvn -f pom.xml clean package'''
+chmod 400 pom.xml
+mvn   clean package'''
           }
         }
 
