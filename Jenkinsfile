@@ -42,7 +42,7 @@ mvn   clean package'''
         }
 
         sh '''cd hello-world-war 
-mvn sonar:sonar -Dsonar.host.url=http://<IP address>:8081 -Dlicense.skip=true'''
+mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dlicense.skip=true'''
       }
     }
 
